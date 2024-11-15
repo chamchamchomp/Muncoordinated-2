@@ -3,9 +3,9 @@
   width: 100vw;
   display: grid;
   grid-template-areas:
-    "topic topic topic topic"
     "propose propose second second"
-    "propose propose second second";
+    "propose propose second second"
+    "topic topic topic topic";
 }
 .proposedtopic {
   grid-area: topic;
@@ -14,7 +14,7 @@
 .topicStyle {
   position: absolute;
   left: 50%;
-  top: 25%;
+  top: 70%;
   transform: translate(-50%, -50%);
   min-height: 5rem;
   margin: auto;
@@ -30,10 +30,13 @@
   line-height: normal;
 }
 .proposerClass {
+  top: 20%;
   grid-area: propose;
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  top: 20vh;
 }
 .proposerClass img {
   height: 12rem;
@@ -53,6 +56,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  top: 20vh;
 }
 .seconderClass img {
   height: 12rem;

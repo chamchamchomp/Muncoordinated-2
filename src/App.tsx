@@ -19,15 +19,15 @@ import Committee from './pages/Committee';
 import { NotFound } from './components/NotFound';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBAG3kYTLU-wVX3whvUU_zhJyzmG1INuSA",
-  authDomain: "mmun2024-25ad2.firebaseapp.com",
-  projectId: "mmun2024-25ad2",
-  storageBucket: "mmun2024-25ad2.firebasestorage.app",
-  messagingSenderId: "429612581246",
-  appId: "1:429612581246:web:16a41ce679ed0afc15f32f",
-  measurementId: "G-Y8QLTG4VW1"
+  apiKey: 'AIzaSyA9EuEf7m3YOTBhBNhoe7DcOIZJP2toL6w',
+  authDomain: 'muncoordinated.firebaseapp.com',
+  databaseURL: 'https://muncoordinated.firebaseio.com',
+  projectId: 'muncoordinated',
+  storageBucket: 'muncoordinated.appspot.com',
+  messagingSenderId: '308589918735',
+  appId: "1:308589918735:web:f3567ce28d637eba40017a",
+  measurementId: "G-DPWPPBRD4M"
 };
-
 
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
