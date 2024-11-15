@@ -1,0 +1,1 @@
+sshCommand = "ssh -i ~/.ssh/github_key"
