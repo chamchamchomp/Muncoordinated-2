@@ -7,7 +7,7 @@ export default function CaucusTimer(props: CaucusTimerProps) {
   return (
     <>
       <div>
-        <h2 className="Caucustext">Caucus time</h2>
+        <h2 className="Caucustext">Next Speaker</h2>
         <div className="muntimediv timerstyle Caucusdata">
           <h3>{secondsToHumanReadableFormat(props.remaining)}</h3>
         </div>

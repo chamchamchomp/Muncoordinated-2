@@ -7,6 +7,7 @@ import createHistory from 'history/createBrowserHistory';
 import * as ReactGA from 'react-ga';
 import * as Sentry from "@sentry/react";
 import 'semantic-ui-css/semantic.min.css';
+import { createRoot } from 'react-dom/client';
 
 ReactGA.initialize('UA-122177622-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -27,12 +28,13 @@ history.listen((location, action) => {
   ReactGA.pageview(location.pathname);
 });
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root') as HTMLElement)
+
+root.render(
 // @ts-ignore
   <Router history={history}>
     <App />
-  </Router>,
-  document.getElementById('root') as HTMLElement
+  </Router>
 );
 
 // If you want your app to work offline and load faster, you can change

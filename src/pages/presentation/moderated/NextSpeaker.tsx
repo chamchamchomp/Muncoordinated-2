@@ -24,9 +24,9 @@ export default function NextSpeaker(props: NextSpeakerProps) {
             <div className="nextSpeakerFlag">
               {<FlagFetch name={data.who} />}
             </div>
-            <div className="nextSpeakerName">
+            {/* <div className="nextSpeakerName">
               <header>{secondsToHumanReadableFormat(data.duration)}</header>
-            </div>
+            </div> */}
           </div>
         ))}
     </>

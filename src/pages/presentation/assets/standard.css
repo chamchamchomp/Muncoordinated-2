@@ -1,0 +1,257 @@
+:root {
+  --background_color: #023E8A;
+  --color1: #FF9090;
+  --color2: #7F6BF0;
+  --color3: #53E9D7;
+  --radius: 750px;
+  --blur_size: 800px;
+  --drift-distance: 160px; /* You can change this value */
+  --blur: 20px;
+}
+
+body {
+  background-color: var(--background_color);
+  margin:0;
+  padding:0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+
+}
+
+.blur {
+  position:absolute;
+  backdrop-filter: blur(var(--blur));
+  width: var(--blur_size);
+  height: var(--blur_size);
+  z-index: 2;
+  background-color: rgba(217, 217, 217, 0.01);
+}
+#main {
+  position:absolute;
+  backdrop-filter: blur(11px);
+  width: var(--blur_size);
+  height: var(--blur_size);
+  z-index: 2;
+  transform: translate(-75px,-25vh);
+}
+
+#b1 {
+left: 50vw;
+top: 5vh;
+}
+
+#b2 {
+left: 10vh;
+}
+
+#b3 {
+left: 40vw;
+top:-10vh;
+}
+
+#b4 {
+left: -10vw;
+backdrop-filter: blur(10px);
+}
+
+#b5 {
+left: -20vw;
+}
+
+#b6 {
+  left: 10vw;
+  top: -10vh;
+}
+
+#b7 {
+  left:17vw;
+}
+
+#v1 {
+top: -60vh;
+left: 20vw;
+}
+
+#v2 {
+top: -55vh;
+left: 10vw;
+width: 200px;
+}
+
+#v3 {
+top: -60vh;
+left: 5vw;
+width: 500px;
+}
+
+#v4 {
+top: -70vh;
+left: 30vw;
+}
+
+#color_parent {
+  position:absolute;
+  border-radius: 50%;
+  height: var(--radius);
+  width: var(--radius);
+  top: -10vh;
+  left:50vw;
+  transform:translate(-50%,-50%);
+}
+#blackhole {
+  position:absolute;
+  border-radius: 50%;
+  background-color: black;
+  height: var(--radius);
+  width: var(--radius);
+  top:-10vh;
+  left:50vw;
+  transform:translate(-50%,-50%);
+  z-index: 2;
+}
+
+#blur_parent {
+  position: absolute;
+  top: -10vh;
+  left:25vw;
+}
+
+#color1 {
+  position:absolute;
+  background-color: var(--color1);
+  border-radius: 50%;
+  height: var(--radius);
+  width: var(--radius);
+  z-index: -1;
+  transform: translate(-20px,40px);
+}
+
+#color2 {
+  position:absolute;
+  background-color: var(--color2);
+  border-radius: 50%;
+  height: var(--radius);
+  width: var(--radius);
+  z-index: -1;
+  transform: translate(-20px,20px);
+}
+
+#color3 {
+  position:absolute;
+  background-color: var(--color3);
+  border-radius: 50%;
+  height: var(--radius);
+  width: var(--radius);
+  z-index: -1;
+  transform: translate(30px,15px);
+}
+
+
+
+
+
+@keyframes randomDrift {
+  0% { transform: translate(0, 0);}
+  100% {
+    /* Each direction can be adjusted for a spread-out effect */
+    transform: translate(var(--x-drift), var(--y-drift))
+  }
+}
+
+#b1 {
+  animation: randomDrift 7s infinite linear;
+  animation-delay: 0s;
+  --x-drift: -200px;
+  --y-drift: -100px;
+}
+
+#b2 {
+  animation: randomDrift 7s infinite linear;
+  animation-delay: 0.5s;
+  --x-drift: 140px;
+  --y-drift: 30px;
+}
+
+#b3 {
+  animation: randomDrift 7s infinite linear;
+  animation-delay: 1.7s;
+  --x-drift: -100px;
+  --y-drift: -90px;
+}
+
+#b4 {
+  animation: randomDrift 7s infinite linear;
+  animation-delay: 1.5s;
+  --x-drift: 100px;
+  --y-drift: 40px;
+  z-index:2;
+}
+
+#b5 {
+  animation: randomDrift 7s infinite linear;
+  animation-delay: 1.8s;
+  --x-drift: 50px;
+  --y-drift: -100px;
+  z-index: 2;
+  }
+
+#b6 {
+  animation: randomDrift 7s infinite linear;
+  animation-delay: 2s;
+  --x-drift: -100px;
+  --y-drift: 50px;
+  z-index: 2;
+  width: 150px;
+}
+
+#b7 {
+  width: 20vh;
+  animation: randomDrift 7s infinite linear;
+  animation-delay: 2.5s;
+  --x-drift: -200px;
+  --y-drift: -50px;
+  z-index: 2;
+}
+
+#v1 {
+  animation: randomDrift 7s infinite linear;
+  animation-delay: 1.4s;
+  --x-drift: 0px;
+  --y-drift: 100px;
+  z-index: 2;  
+}
+
+#v2 {
+  animation: randomDrift 7s infinite linear;
+  animation-delay: 2.3s;
+  --x-drift: -100px;
+  --y-drift: 50px;
+  z-index: 2;
+}
+
+#v3 {
+  animation: randomDrift 7s infinite linear;
+  animation-delay: 2.5s;
+  --x-drift: -100px;
+  --y-drift: 80px;
+  z-index: 2;
+}
+
+#v4 {
+  animation: randomDrift 7s infinite linear;
+  animation-delay: 1.2s;
+  --x-drift: 80px;
+  --y-drift: 150px;
+  z-index: 2;
+}
+
+#mask {
+  position: absolute;
+  width: 100%;
+  height: 180%;
+  top: -80vh;
+  z-index: 4;
+  background: radial-gradient(circle,rgba(2,62,138,0) 40%, rgba(2,62,138,1) 60%);
+}
+

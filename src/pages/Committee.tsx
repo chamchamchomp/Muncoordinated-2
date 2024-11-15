@@ -41,6 +41,7 @@ import Strawpoll from './Strawpoll';
 import {logClickSetupCommittee} from '../modules/analytics';
 import {CommitteeData, CommitteeID, DEFAULT_COMMITTEE} from "../models/committee";
 import { createMedia } from '@artsy/fresnel';
+import { Presentation } from './Presentation';
 
 interface DesktopContainerProps {
   menu?: React.ReactNode;

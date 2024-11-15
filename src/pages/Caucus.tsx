@@ -16,7 +16,6 @@ import {
   Segment,
   TextArea,
 } from "semantic-ui-react";
-import { Helmet } from "react-helmet";
 import Timer, { toggleTicking } from "../components/Timer";
 import { RouteComponentProps } from "react-router";
 import {

@@ -2,32 +2,29 @@
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-style: bold;
-  font-size: 4rem;
+  font-size: 17vh;
   color: white;
   text-align: center;
 }
 .muntime {
-  font-family: "Jetbrains Mono", sans-serif;
-  font-style: bold;
-  font-size: 5rem;
+  font-family: "IMB Plex Mono", sans-serif;
+  font-Weight: 800;
+  font-size: 14vh;
   color: white;
-  border: 5px solid #caf0f8;
-  border-radius: 1.5rem;
-  background-color: #023e8a;
 }
 .muntimediv {
-  margin-left: auto;
-  margin-right: auto;
   /* width: 40%; */
-  width: 18.75rem;
+  width: fit-content;
+  height: fit-content;
   text-align: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .redundantpos {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  top: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,4 +32,8 @@
 
   width: 100%;
   height: 100%;
+}
+
+.muntitle, .muntime, .muntimediv , .redundantpos {
+  z-index:3;
 }

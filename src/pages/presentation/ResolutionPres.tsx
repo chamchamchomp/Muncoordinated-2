@@ -1,7 +1,7 @@
 import { ResolutionData } from "../../models/resolution";
 import React from "react";
 import FlagFetch from "./moderated/FlagFetch";
-import BackgroundAnimDark from "./BackgroundAnimDark";
+import BackgroundAnimDark from "./standardDis";
 import "./assets/resolutionPres.css";
 export type resolutionprops = ResolutionData;
 
@@ -30,7 +30,27 @@ export default function ResolutionPres(props: resolutionprops) {
       headerStyle = { color: "white" };
   }
   return (
-    <>
+    // <>
+      // <div className="proposeMaster">
+      //   <div className="proposedtopic">
+      //     <div className="topicStyle">
+      //       <header style={headerStyle}>{props.name}</header>
+      //     </div>
+      //   </div>
+      //   <div className="proposerClass">
+      //     <FlagFetch name={props.proposer as string} />
+      //     <header>{props.proposer}</header>
+      //     <h2 className="identifier">proposer</h2>
+      //   </div>
+      //   <div className="seconderClass">
+      //     <FlagFetch name={props.seconder as string} />
+      //     <header>{props.seconder}</header>
+      //     <h2 className="identifier">seconder</h2>
+      //   </div>
+      // </div>
+      // <BackgroundAnimDark />
+    // </>
+    <div style={{ minHeight: '100vh', height: '100%', 'background': '#023E8A' }}>
       <div className="proposeMaster">
         <div className="proposedtopic">
           <div className="topicStyle">
@@ -49,6 +69,6 @@ export default function ResolutionPres(props: resolutionprops) {
         </div>
       </div>
       <BackgroundAnimDark />
-    </>
+  </div>
   );
 }
